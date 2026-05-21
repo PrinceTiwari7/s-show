@@ -1,0 +1,738 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Major Project Report - S-Show</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      margin: 40px auto;
+      max-width: 960px;
+      padding: 0 20px;
+      color: #1f2937;
+    }
+    h1, h2, h3 {
+      color: #111827;
+      margin-top: 1.2em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px 0;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 8px;
+      text-align: left;
+    }
+    code {
+      background: #f3f4f6;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    hr {
+      margin: 24px 0;
+    }
+    @media print {
+      body {
+        max-width: none;
+        margin: 0;
+        padding: 0 12mm;
+        font-size: 12pt;
+      }
+      h1 { font-size: 20pt; }
+      h2 { font-size: 16pt; }
+      h3 { font-size: 14pt; }
+    }
+  </style>
+</head>
+<body>
+<h1>SANJEEV AGRAWAL GLOBAL EDUCATIONAL UNIVERSITY, BHOPAL</h1>
+<h2>"S-Show: Movie and TV Discovery Web Application"</h2>
+<p>A<br />
+<strong>Major Project Report</strong><br />
+Submitted to the<br />
+Sanjeev Agrawal Global Educational University, Bhopal, M.P.<br />
+in partial fulfillment of the requirements for the award of the Degree of<br />
+<strong>Bachelor of Engineering (B.Tech)</strong><br />
+Specialization in<br />
+<strong>Computer Science and Engineering</strong><br />
+VIII Semester</p>
+<p>By<br />
+<strong>Student Name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Enrollment No.:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____</p>
+<p>Under the Guidance of<br />
+<strong>Guide Name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>______<br />
+(Designation, School Name)</p>
+<p>SCHOOL OF ENGINEERING AND TECHNOLOGY<br />
+Spring 2025-26</p>
+<hr />
+<h2>CERTIFICATE FROM THE SUPERVISOR</h2>
+<p>This is to certify that the work incorporated in the project report entitled <strong>"S-Show: Movie and TV Discovery Web Application"</strong> is a record of work carried out by <strong>Student Name (Enrollment No.)</strong> under my guidance and supervision for the award Degree of Bachelor of Technology in <strong>Computer Science and Engineering</strong>, Sanjeev Agrawal Global Educational University, Bhopal (M.P).</p>
+<p>To the best of my knowledge and belief, the project report:</p>
+<ol>
+<li>Embodies the work of the candidate himself/herself,</li>
+<li>Has duly been completed,</li>
+<li>Fulfills the requirement of the ordinance/guidelines relating to the University, and</li>
+<li>Is up to the desired standard both in respect of contents and language for being referred to the examiners.</li>
+</ol>
+<p><strong>Supervisor:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>HOD:</strong> Dr. Mukesh Dixit<br />
+<strong>Designation:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____<br />
+<strong>School:</strong> SSOET</p>
+<p>The project work as mentioned above is hereby recommended and forwarded for examination and evaluation.</p>
+<hr />
+<h2>CANDIDATE'S DECLARATION</h2>
+<p>I hereby declare that the work presented in the project entitled <strong>"S-Show: Movie and TV Discovery Web Application"</strong> in partial fulfillment of the requirements for the award of the degree of Bachelor of Technology in <strong>Computer Science and Engineering</strong>, submitted in the School of Engineering and Technology, is an authentic record of my own work carried out under the guidance of <strong>Guide Name</strong>. I have not submitted the matter embodied in this report for award of any other degree.</p>
+<p><strong>Supervisor:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Guide Name:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_<br />
+<strong>Designation:</strong> </em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p><strong>Submitted By:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Student Name [Enrollment No.]:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____</p>
+<hr />
+<h2>CERTIFICATE</h2>
+<p>This is to certify that the work embodied in this project entitled <strong>"S-Show: Movie and TV Discovery Web Application"</strong> being submitted by <strong>Student Name (Enrollment No.)</strong> in partial fulfillment of the requirement for the award of the degree of B.Tech CSE to School of Engineering and Technology, Sanjeev Agrawal Global Educational University, Bhopal (M.P), during the academic year 2025-26, is a record of a bonafide piece of work undertaken under the supervision of the undersigned.</p>
+<p>Guided and Approved By<br />
+<strong>Guide Name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Designation:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____<br />
+School of Engineering and Technology</p>
+<hr />
+<h2>ACKNOWLEDGEMENT</h2>
+<p>I take this opportunity to express my sincere gratitude to <strong>Guide Name</strong> for valuable guidance, constant motivation, and support throughout this project work. Their direction and suggestions were instrumental in the successful completion of this project.</p>
+<p>I express my deep gratitude to <strong>Dr. Mukesh Dixit, HOD, Department of Computer Science and Engineering</strong>, for providing facilities and a positive environment for carrying out this work.</p>
+<p>I also thank all faculty members and staff of the School of Engineering and Technology for their support and cooperation. I am thankful to my friends and classmates for their helpful discussions, feedback, and encouragement throughout this project.</p>
+<p><strong>Student Name [Enrollment No.]:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<hr />
+<h2>PLAGIARISM CERTIFICATE</h2>
+<p>I, <strong>Guide Name</strong>, certify that the report titled <strong>"S-Show: Movie and TV Discovery Web Application"</strong> submitted by <strong>Student Name (Enrollment No.)</strong> has been checked through plagiarism detection software and the plagiarism percentage is reported as <strong>____ %</strong>.</p>
+<ol>
+<li>Plagiarism report generated by the software is attached.</li>
+<li>The project has not been submitted elsewhere for publication or award of any other degree.</li>
+</ol>
+<p><strong>Signature of Supervisor:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Signature of Student:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____</p>
+<p><strong>Guide Name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Student Name [Enrollment No.]:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____</p>
+<hr />
+<h2>TABLE OF CONTENTS</h2>
+<ol>
+<li>Title Page  </li>
+<li>Certificate from the Supervisor  </li>
+<li>Candidate's Declaration  </li>
+<li>Certificate  </li>
+<li>Acknowledgement  </li>
+<li>Plagiarism Certificate  </li>
+<li>Table of Contents  </li>
+<li>List of Figures  </li>
+<li>List of Tables  </li>
+<li>Abstract  </li>
+<li>Chapter 1: Introduction  </li>
+<li>Chapter 2: Literature Survey  </li>
+<li>Chapter 3: Problem Identification and Objective  </li>
+<li>Chapter 4: Proposed Methodology  </li>
+<li>Chapter 5: Simulation and Results  </li>
+<li>Chapter 6: Conclusion and Future Scope  </li>
+<li>References  </li>
+<li>Appendices  </li>
+<li>Plagiarism Report</li>
+</ol>
+<hr />
+<h2>LIST OF FIGURES</h2>
+<ol>
+<li>Figure 1: High-Level System Architecture  </li>
+<li>Figure 2: Data Flow Diagram (Level 0)  </li>
+<li>Figure 3: Data Flow Diagram (Level 1)  </li>
+<li>Figure 4: Redux Store Interaction Flow  </li>
+<li>Figure 5: UI Navigation Flow  </li>
+</ol>
+<hr />
+<h2>LIST OF TABLES</h2>
+<ol>
+<li>Table 1: Hardware and Software Requirements  </li>
+<li>Table 2: Functional Requirements  </li>
+<li>Table 3: Non-Functional Requirements  </li>
+<li>Table 4: Data Dictionary  </li>
+<li>Table 5: Work Breakdown Structure  </li>
+<li>Table 6: Test Cases and Results  </li>
+</ol>
+<hr />
+<h2>ABSTRACT</h2>
+<p>The project <strong>"S-Show: Movie and TV Discovery Web Application"</strong> is a modern web application developed using <strong>React, Vite, Redux Toolkit, and Tailwind CSS</strong> for browsing and exploring movies, TV shows, and popular people. The system integrates with the <strong>TMDB API</strong> to fetch real-time entertainment content such as trending media, popular titles, detailed metadata, recommendations, and trailers.</p>
+<p>The application is designed around a modular front-end architecture with reusable UI components and Redux-based state management for media details. It supports category-based filtering, search, infinite scrolling for content loading, and trailer playback through YouTube embedding. The application improves user experience by providing responsive navigation, quick media discovery, and consolidated detail views.</p>
+<p>This report presents the complete system analysis, methodology, implementation, and evaluation of the project as per academic report standards.</p>
+<p><strong>Keywords:</strong> React, Vite, Redux Toolkit, TMDB API, Tailwind CSS, Infinite Scroll, Media Discovery</p>
+<hr />
+<h1>CHAPTER 1: INTRODUCTION</h1>
+<h2>1.1 AIM</h2>
+<p>To design and develop a responsive and user-friendly web application that enables users to discover trending and popular movies, TV shows, and celebrities, view comprehensive media details, and watch trailers through an integrated interface.</p>
+<h2>1.2 PROJECT BACKGROUND</h2>
+<p>Entertainment users increasingly rely on digital platforms for discovering content. Existing large OTT and media platforms often provide rich data but are heavy and complex for quick exploration. The need exists for a lightweight, focused, and fast web app that offers:</p>
+<ul>
+<li>Trending and category-wise media discovery</li>
+<li>Unified search across media types</li>
+<li>Trailer viewing</li>
+<li>Recommendation-based navigation</li>
+</ul>
+<p>This project uses TMDB's public APIs and a modern React stack to provide an efficient entertainment discovery experience.</p>
+<h2>1.3 OBJECTIVE</h2>
+<ul>
+<li>Build a single-page application for movie and TV discovery.</li>
+<li>Integrate TMDB API for dynamic data.</li>
+<li>Implement category and duration filters.</li>
+<li>Implement infinite scrolling for scalable browsing.</li>
+<li>Provide detailed pages for movies, TV shows, and people.</li>
+<li>Display trailers and recommendations for better engagement.</li>
+<li>Maintain modular, reusable component architecture.</li>
+</ul>
+<h2>1.4 BENEFITS</h2>
+<ul>
+<li>Fast and lightweight interface for media browsing.</li>
+<li>Real-time data from a trusted movie database.</li>
+<li>Better user engagement through trailers and recommendations.</li>
+<li>Extensible structure for future features (authentication, watchlist, reviews).</li>
+<li>Practical implementation of modern front-end engineering practices.</li>
+</ul>
+<hr />
+<h1>CHAPTER 2: LITERATURE SURVEY</h1>
+<h2>2.1 EXISTING SYSTEM</h2>
+<p>Existing systems include OTT apps, entertainment websites, and catalog portals. Common limitations in many lightweight student projects are:</p>
+<ul>
+<li>Static datasets and no real-time content updates</li>
+<li>Non-responsive layouts</li>
+<li>Lack of centralized state management</li>
+<li>Poor component reusability and maintainability</li>
+<li>Limited trailer/recommendation integration</li>
+</ul>
+<h2>2.2 PROPOSED SYSTEM</h2>
+<p>The proposed system offers:</p>
+<ul>
+<li>Live TMDB API integration</li>
+<li>React Router based navigation</li>
+<li>Redux Toolkit store for structured detail state management</li>
+<li>Reusable component set (<code>Topnav</code>, <code>Sidenav</code>, <code>Cards</code>, <code>Dropdown</code>, <code>Trailer</code>)</li>
+<li>Infinite scrolling lists for better user experience</li>
+<li>Responsive Tailwind-based UI</li>
+<li>Search across multiple media types</li>
+</ul>
+<hr />
+<h1>CHAPTER 3: PROBLEM IDENTIFICATION AND OBJECTIVE</h1>
+<h2>3.1 PROBLEM IDENTIFICATION</h2>
+<p>Users face the following issues when trying to discover entertainment content quickly:</p>
+<ul>
+<li>Content scattered across multiple sources</li>
+<li>Difficulty finding concise and structured details</li>
+<li>Lack of quick trailer access in simple interfaces</li>
+<li>Time-consuming navigation across categories</li>
+</ul>
+<h2>3.2 OBJECTIVE</h2>
+<p>To solve the above, the system is designed to:</p>
+<ul>
+<li>Centralize movie/TV/people discovery in one UI</li>
+<li>Provide details, credits, translations, and related suggestions</li>
+<li>Offer keyword-based multi-search</li>
+<li>Support smooth content loading with infinite scroll</li>
+<li>Improve overall content exploration efficiency</li>
+</ul>
+<hr />
+<h1>CHAPTER 4: PROPOSED METHODOLOGY</h1>
+<h2>4.1 SYSTEM ARCHITECTURE</h2>
+<p>The application follows a client-side SPA architecture:</p>
+<ol>
+<li>User interacts with React UI components.</li>
+<li>Components trigger API calls via Axios instance.</li>
+<li>For detail pages, data is fetched through Redux async actions.</li>
+<li>API responses are rendered in reusable UI modules.</li>
+</ol>
+<p><strong>Figure 1: High-Level Architecture</strong></p>
+<p>User -&gt; React UI -&gt; Router -&gt; Component Layer -&gt; Axios/TMDB API<br />
+                                     -&gt; Redux Store (detail state)</p>
+<h2>4.2 PHYSICAL DESIGN</h2>
+<ul>
+<li>Platform: Web browser</li>
+<li>Front-end: React application served by Vite dev/build pipeline</li>
+<li>Data source: TMDB cloud API</li>
+<li>Deployment-ready build: static assets generated by <code>vite build</code></li>
+</ul>
+<h2>4.3 DATABASE DESIGN</h2>
+<p>No local relational/non-relational database is used. The application consumes data from TMDB REST endpoints.</p>
+<p>Logical entities handled in the app:</p>
+<ul>
+<li>Movie</li>
+<li>TV Show</li>
+<li>Person</li>
+<li>Trailer (video metadata)</li>
+<li>Recommendation list</li>
+<li>Translation list</li>
+<li>Watch provider metadata</li>
+</ul>
+<h2>4.4 PROJECT SCHEDULE</h2>
+<p>Suggested timeline:</p>
+<ul>
+<li>Week 1-2: Requirement analysis and API study  </li>
+<li>Week 3-4: UI design and routing setup  </li>
+<li>Week 5-6: Listing modules (Trending, Popular, Movie, TV, People)  </li>
+<li>Week 7-8: Detail modules with Redux integration  </li>
+<li>Week 9: Search and trailer integration  </li>
+<li>Week 10: Testing and optimization  </li>
+<li>Week 11-12: Documentation and final report preparation  </li>
+</ul>
+<h2>4.5 WORK BREAKDOWN STRUCTURE</h2>
+<p><strong>Table 5: WBS</strong></p>
+<ol>
+<li>Project Planning  </li>
+<li>Requirement Analysis  </li>
+<li>UI/UX Design  </li>
+<li>Front-end Component Development  </li>
+<li>API Integration  </li>
+<li>Redux State Management  </li>
+<li>Testing and Debugging  </li>
+<li>Documentation and Submission  </li>
+</ol>
+<h2>4.6 GANTT CHART</h2>
+<p>Textual representation:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>W1-2</th>
+<th>W3-4</th>
+<th>W5-6</th>
+<th>W7-8</th>
+<th>W9</th>
+<th>W10</th>
+<th>W11-12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analysis</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Design</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Core Development</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Integration</td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Testing</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<h2>4.7 HARDWARE AND SOFTWARE REQUIREMENTS</h2>
+<p><strong>Table 1: Requirements</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 10/11, Linux, or macOS</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>Minimum 4 GB (8 GB recommended)</td>
+</tr>
+<tr>
+<td>Processor</td>
+<td>Dual-core or better</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>Chrome/Edge/Firefox (latest)</td>
+</tr>
+<tr>
+<td>Runtime</td>
+<td>Node.js 18+</td>
+</tr>
+<tr>
+<td>Package Manager</td>
+<td>npm</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>React 18</td>
+</tr>
+<tr>
+<td>Build Tool</td>
+<td>Vite 5</td>
+</tr>
+<tr>
+<td>Styling</td>
+<td>Tailwind CSS</td>
+</tr>
+<tr>
+<td>State Management</td>
+<td>Redux Toolkit + React Redux</td>
+</tr>
+<tr>
+<td>API Client</td>
+<td>Axios</td>
+</tr>
+</tbody>
+</table>
+<h2>4.8 DATAFLOW DIAGRAMS</h2>
+<p><strong>Figure 2: DFD Level 0</strong></p>
+<p>User -&gt; S-Show Application -&gt; TMDB API -&gt; S-Show Application -&gt; User</p>
+<p><strong>Figure 3: DFD Level 1</strong></p>
+<ol>
+<li>User selects page/filter/search  </li>
+<li>Component prepares endpoint request  </li>
+<li>Axios sends request to TMDB  </li>
+<li>Response parsed and stored (local state/Redux)  </li>
+<li>UI updates with cards/details/trailer  </li>
+</ol>
+<h2>4.9 DATA DICTIONARY</h2>
+<p><strong>Table 4: Data Dictionary</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Number</td>
+<td>Unique media/person identifier</td>
+</tr>
+<tr>
+<td>media_type</td>
+<td>String</td>
+<td>Type of item (<code>movie</code>, <code>tv</code>, <code>person</code>)</td>
+</tr>
+<tr>
+<td>title/name</td>
+<td>String</td>
+<td>Display title</td>
+</tr>
+<tr>
+<td>overview</td>
+<td>String</td>
+<td>Description text</td>
+</tr>
+<tr>
+<td>poster_path</td>
+<td>String</td>
+<td>Poster image path</td>
+</tr>
+<tr>
+<td>backdrop_path</td>
+<td>String</td>
+<td>Banner image path</td>
+</tr>
+<tr>
+<td>vote_average</td>
+<td>Number</td>
+<td>User rating</td>
+</tr>
+<tr>
+<td>release_date / first_air_date</td>
+<td>Date String</td>
+<td>Release date metadata</td>
+</tr>
+<tr>
+<td>genres</td>
+<td>Array</td>
+<td>List of genre objects</td>
+</tr>
+<tr>
+<td>videos</td>
+<td>Object/Array</td>
+<td>Trailer and video metadata</td>
+</tr>
+<tr>
+<td>recommendations</td>
+<td>Array</td>
+<td>Recommended media items</td>
+</tr>
+</tbody>
+</table>
+<h2>4.10 ER MODEL</h2>
+<p>Conceptual ER model:</p>
+<ul>
+<li><strong>Media</strong> (Movie/TV) has many <strong>Videos</strong></li>
+<li><strong>Media</strong> has many <strong>Recommendations</strong> (self-reference)</li>
+<li><strong>Person</strong> links to many <strong>Credits</strong> (Movie/TV)</li>
+<li><strong>Media</strong> has many <strong>Translations</strong></li>
+<li><strong>Media</strong> has many <strong>Watch Providers</strong></li>
+</ul>
+<hr />
+<h1>CHAPTER 5: SIMULATION AND RESULTS</h1>
+<h2>5.1 USER INTERFACE DESIGN</h2>
+<p>Major UI screens:</p>
+<ul>
+<li>Home page with spotlight header and trending cards</li>
+<li>Trending page with category and duration filters</li>
+<li>Popular page with movie/tv filter</li>
+<li>Movie listing page (category filter + infinite scroll)</li>
+<li>TV listing page (category filter + infinite scroll)</li>
+<li>People listing page (popular personalities)</li>
+<li>Detail pages (movie/tv/person)</li>
+<li>Trailer overlay player</li>
+</ul>
+<p>Design characteristics:</p>
+<ul>
+<li>Dark theme layout</li>
+<li>Tailwind utility-first styling</li>
+<li>Sidebar + top search navigation</li>
+<li>Card-based responsive visual hierarchy</li>
+</ul>
+<h2>5.2 MODULES AND THEIR ABSTRACTION</h2>
+<ol>
+<li>
+<p><strong>Routing Module (<code>App.jsx</code>)</strong><br />
+   Handles URL-to-component mapping for all sections.</p>
+</li>
+<li>
+<p><strong>State Module (<code>store/Store.jsx</code> + slices)</strong><br />
+   Manages detail-state for movie, tv, person.</p>
+</li>
+<li>
+<p><strong>API Module (<code>utils/Axios.jsx</code>)</strong><br />
+   Centralized axios instance with TMDB base URL and auth header.</p>
+</li>
+<li>
+<p><strong>List Modules (<code>Trending</code>, <code>Popular</code>, <code>Movie</code>, <code>Tv_show</code>, <code>People</code>)</strong><br />
+   Fetch and render paginated collection views with filters.</p>
+</li>
+<li>
+<p><strong>Detail Modules (<code>Moviedetails</code>, <code>Tvdetails</code>, <code>Peopledetails</code>)</strong><br />
+   Fetch complete metadata and render rich details.</p>
+</li>
+<li>
+<p><strong>Search Module (<code>Topnav</code>)</strong><br />
+   Provides multi-type search and direct navigation.</p>
+</li>
+<li>
+<p><strong>Trailer Module (<code>Trailer</code>)</strong><br />
+   Renders YouTube trailer via <code>react-player</code>.</p>
+</li>
+</ol>
+<h2>5.3 RESULT ANALYSIS</h2>
+<p>Observed outcomes:</p>
+<ul>
+<li>Correct loading of trending, popular, and category data from TMDB.</li>
+<li>Successful list pagination using infinite scroll.</li>
+<li>Proper route navigation between listing and detail pages.</li>
+<li>Detail pages show key metadata (overview, ratings, genres, translations).</li>
+<li>Trailer playback works when trailer key is present.</li>
+<li>Search provides quick cross-category lookup.</li>
+</ul>
+<h2>5.4 FUNCTIONAL AND NON-FUNCTIONAL REQUIREMENTS</h2>
+<p><strong>Table 2: Functional Requirements</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FR1</td>
+<td>View trending items by type and duration</td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td>FR2</td>
+<td>View popular movies/TV shows</td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td>FR3</td>
+<td>Browse movies by category</td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td>FR4</td>
+<td>Browse TV shows by category</td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td>FR5</td>
+<td>Browse popular people</td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td>FR6</td>
+<td>View media/person details</td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td>FR7</td>
+<td>Search across media types</td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td>FR8</td>
+<td>Watch trailer</td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td>FR9</td>
+<td>Navigate recommendations</td>
+<td>Implemented</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 3: Non-Functional Requirements</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NFR1</td>
+<td>Responsive UI</td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td>NFR2</td>
+<td>Modularity and reusable components</td>
+<td>Implemented</td>
+</tr>
+<tr>
+<td>NFR3</td>
+<td>Maintainable state flow</td>
+<td>Implemented (Redux)</td>
+</tr>
+<tr>
+<td>NFR4</td>
+<td>Real-time content freshness</td>
+<td>Implemented (API based)</td>
+</tr>
+<tr>
+<td>NFR5</td>
+<td>Cross-browser support</td>
+<td>Achieved (modern browsers)</td>
+</tr>
+</tbody>
+</table>
+<h2>5.5 CONSTRAINTS</h2>
+<ul>
+<li>Dependency on external TMDB API uptime and rate limits.</li>
+<li>API authentication token handling must remain secure.</li>
+<li>No backend/custom database in current version.</li>
+<li>Some UI sections require cleanup/refinement for production quality.</li>
+<li>Feature depth depends on available TMDB endpoint data.</li>
+</ul>
+<hr />
+<h1>CHAPTER 6: CONCLUSION AND FUTURE SCOPE</h1>
+<h2>6.1 CONCLUSION</h2>
+<p>The <strong>S-Show</strong> project successfully demonstrates a complete front-end media discovery solution using modern web technologies. It integrates external APIs effectively, applies component-driven architecture, and uses Redux for organized state management. The final system provides key user features such as search, filtering, infinite scrolling, detail exploration, and trailer viewing in a clean and responsive interface.</p>
+<p>This project meets the intended learning and functional goals of a major B.Tech final-year project in terms of design, implementation, and practical utility.</p>
+<h2>6.2 FUTURE SCOPE</h2>
+<ul>
+<li>User authentication and personalized profiles</li>
+<li>Watchlist/favorites and bookmarking</li>
+<li>Review and rating submission</li>
+<li>Backend integration for user data persistence</li>
+<li>Caching and offline support</li>
+<li>Better error boundaries and retry handling</li>
+<li>Advanced recommendation logic and analytics dashboard</li>
+<li>Accessibility and performance optimization audits</li>
+</ul>
+<hr />
+<h1>REFERENCES</h1>
+<ol>
+<li><a href="https://developer.themoviedb.org/docs">TMDB API Documentation</a></li>
+<li><a href="https://react.dev/">React Documentation</a></li>
+<li><a href="https://redux-toolkit.js.org/">Redux Toolkit Documentation</a></li>
+<li><a href="https://reactrouter.com/">React Router Documentation</a></li>
+<li><a href="https://vitejs.dev/">Vite Documentation</a></li>
+<li><a href="https://tailwindcss.com/docs">Tailwind CSS Documentation</a></li>
+<li><a href="https://axios-http.com/docs/intro">Axios Documentation</a></li>
+</ol>
+<hr />
+<h1>APPENDICES</h1>
+<h2>Appendix A: Key Project Files</h2>
+<ul>
+<li><code>src/App.jsx</code> (routing)</li>
+<li><code>src/main.jsx</code> (application bootstrap with Provider + BrowserRouter)</li>
+<li><code>src/utils/Axios.jsx</code> (TMDB API client)</li>
+<li><code>src/components/store/Store.jsx</code> (Redux store configuration)</li>
+<li><code>src/components/store/actions/*.jsx</code> (async API detail loaders)</li>
+<li><code>src/components/store/reducers/*.jsx</code> (slices)</li>
+<li><code>src/components/partials/*.jsx</code> (reusable UI modules)</li>
+<li><code>src/components/*.jsx</code> (page modules)</li>
+</ul>
+<h2>Appendix B: Build and Run</h2>
+<ol>
+<li>Install dependencies: <code>npm install</code></li>
+<li>Start development server: <code>npm run dev</code></li>
+<li>Production build: <code>npm run build</code></li>
+<li>Preview build: <code>npm run preview</code></li>
+</ol>
+<h2>Appendix C: Known Improvement Areas</h2>
+<ul>
+<li>Replace hardcoded API bearer token with environment variable setup.</li>
+<li>Add robust loading/error states on all screens.</li>
+<li>Remove debug logs and dead code comments.</li>
+<li>Expand test coverage (unit + integration + UI flow tests).</li>
+</ul>
+<hr />
+<h1>PLAGIARISM REPORT</h1>
+<p>Attach plagiarism report generated from approved software here.</p>
+</body>
+</html>

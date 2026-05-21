@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: s-show
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TMDB_TOKEN
+        sync: false        # You will enter this manually in the Render dashboard
+      - key: PORT
+        value: 10000

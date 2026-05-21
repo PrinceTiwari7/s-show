@@ -1,0 +1,1933 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Major Project Report - S-Show</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      margin: 40px auto;
+      max-width: 960px;
+      padding: 0 20px;
+      color: #1f2937;
+    }
+    h1, h2, h3 {
+      color: #111827;
+      margin-top: 1.2em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px 0;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 8px;
+      text-align: left;
+    }
+    code {
+      background: #f3f4f6;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    hr {
+      margin: 24px 0;
+    }
+    @media print {
+      body {
+        max-width: none;
+        margin: 0;
+        padding: 0 12mm;
+        font-size: 12pt;
+      }
+      h1 { font-size: 20pt; }
+      h2 { font-size: 16pt; }
+      h3 { font-size: 14pt; }
+    }
+  </style>
+</head>
+<body>
+<h1>SANJEEV AGRAWAL GLOBAL EDUCATIONAL UNIVERSITY, BHOPAL</h1>
+<h2>"S-Show: Movie and TV Discovery Web Application"</h2>
+<p>A<br />
+<strong>Major Project Report</strong><br />
+Submitted to the<br />
+Sanjeev Agrawal Global Educational University, Bhopal, M.P.<br />
+in partial fulfillment of the requirements for the award of the Degree of<br />
+<strong>Bachelor of Engineering (B.Tech)</strong><br />
+Specialization in<br />
+<strong>Computer Science and Engineering</strong><br />
+VIII Semester</p>
+<p>By<br />
+<strong>Student Name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Enrollment No.:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____</p>
+<p>Under the Guidance of<br />
+<strong>Guide Name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>______<br />
+(Designation, School Name)</p>
+<p>SCHOOL OF ENGINEERING AND TECHNOLOGY<br />
+Spring 2025-26</p>
+<hr />
+<h2>CERTIFICATE FROM THE SUPERVISOR</h2>
+<p>This is to certify that the work incorporated in the project report entitled <strong>"S-Show: Movie and TV Discovery Web Application"</strong> is a record of work carried out by <strong>Student Name (Enrollment No.)</strong> under my guidance and supervision for the award Degree of Bachelor of Technology in <strong>Computer Science and Engineering</strong>, Sanjeev Agrawal Global Educational University, Bhopal (M.P).</p>
+<p>To the best of my knowledge and belief, the project report:</p>
+<ol>
+<li>Embodies the work of the candidate himself/herself.</li>
+<li>Has duly been completed.</li>
+<li>Fulfills the requirement of the ordinance/guidelines relating to the University.</li>
+<li>Is up to the desired standard both in respect of contents and language for being referred to the examiners.</li>
+</ol>
+<p><strong>Supervisor:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>HOD:</strong> Dr. Mukesh Dixit<br />
+<strong>Designation:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____<br />
+<strong>School:</strong> SSOET</p>
+<p>The project work as mentioned above is hereby recommended and forwarded for examination and evaluation.</p>
+<hr />
+<h2>CANDIDATE'S DECLARATION</h2>
+<p>I hereby declare that the work presented in the project entitled <strong>"S-Show: Movie and TV Discovery Web Application"</strong> in partial fulfillment of the requirements for the award of the degree of Bachelor of Technology in <strong>Computer Science and Engineering</strong>, submitted in the School of Engineering and Technology, is an authentic record of my own work carried out under the guidance of <strong>Guide Name</strong>. I have not submitted the matter embodied in this report for award of any other degree.</p>
+<p><strong>Supervisor:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Guide Name:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_<br />
+<strong>Designation:</strong> </em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p><strong>Submitted By:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Student Name [Enrollment No.]:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____</p>
+<hr />
+<h2>CERTIFICATE</h2>
+<p>This is to certify that the work embodied in this project entitled <strong>"S-Show: Movie and TV Discovery Web Application"</strong> being submitted by <strong>Student Name (Enrollment No.)</strong> in partial fulfillment of the requirement for the award of the degree of B.Tech CSE to School of Engineering and Technology, Sanjeev Agrawal Global Educational University, Bhopal (M.P), during the academic year 2025-26, is a record of a bonafide piece of work undertaken under the supervision of the undersigned.</p>
+<p>Guided and Approved By<br />
+<strong>Guide Name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Designation:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____<br />
+School of Engineering and Technology</p>
+<hr />
+<h2>ACKNOWLEDGEMENT</h2>
+<p>I take this opportunity to express my sincere gratitude to <strong>Guide Name</strong> for valuable guidance, constant motivation, and support throughout this project work. Their direction and suggestions were instrumental in the successful completion of this project.</p>
+<p>I express my deep gratitude to <strong>Dr. Mukesh Dixit, HOD, Department of Computer Science and Engineering</strong>, for providing facilities and a positive environment for carrying out this work.</p>
+<p>I also thank all faculty members and staff of the School of Engineering and Technology for their support and cooperation. I am thankful to my friends and classmates for their helpful discussions, feedback, and encouragement throughout this project.</p>
+<p><strong>Student Name [Enrollment No.]:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<hr />
+<h2>PLAGIARISM CERTIFICATE</h2>
+<p>I, <strong>Guide Name</strong>, certify that the report titled <strong>"S-Show: Movie and TV Discovery Web Application"</strong> submitted by <strong>Student Name (Enrollment No.)</strong> has been checked through plagiarism detection software and the plagiarism percentage is reported as <strong>____ %</strong>.</p>
+<ol>
+<li>Plagiarism report generated by the software is attached.</li>
+<li>The project has not been submitted elsewhere for publication or award of any other degree.</li>
+</ol>
+<p><strong>Signature of Supervisor:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Signature of Student:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____</p>
+<p><strong>Guide Name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em>_<br />
+<strong>Student Name [Enrollment No.]:</strong> </strong><strong><em>_</em></strong><strong><em>_</em></strong>____</p>
+<hr />
+<h2>TABLE OF CONTENTS</h2>
+<ol>
+<li>Title Page  </li>
+<li>Certificate from the Supervisor  </li>
+<li>Candidate's Declaration  </li>
+<li>Certificate  </li>
+<li>Acknowledgement  </li>
+<li>Plagiarism Certificate  </li>
+<li>Table of Contents  </li>
+<li>List of Figures  </li>
+<li>List of Tables  </li>
+<li>Abstract  </li>
+<li>Chapter 1: Introduction  </li>
+<li>Chapter 2: Literature Survey  </li>
+<li>Chapter 3: Problem Identification and Objective  </li>
+<li>Chapter 4: Proposed Methodology  </li>
+<li>Chapter 5: Simulation and Results  </li>
+<li>Chapter 6: Conclusion and Future Scope  </li>
+<li>References  </li>
+<li>Appendices  </li>
+<li>Plagiarism Report</li>
+</ol>
+<hr />
+<h2>LIST OF FIGURES</h2>
+<ol>
+<li>Figure 1: High-Level System Architecture  </li>
+<li>Figure 2: Component-Level Architecture  </li>
+<li>Figure 3: Redux Data Flow  </li>
+<li>Figure 4: Data Flow Diagram (Level 0)  </li>
+<li>Figure 5: Data Flow Diagram (Level 1)  </li>
+<li>Figure 6: Navigation and Routing Diagram  </li>
+<li>Figure 7: API Integration Flow  </li>
+<li>Figure 8: Detail Screen Processing Flow  </li>
+<li>Figure 9: Search Processing Flow  </li>
+<li>Figure 10: Deployment and Build Workflow  </li>
+</ol>
+<hr />
+<h2>LIST OF TABLES</h2>
+<ol>
+<li>Table 1: Hardware and Software Requirements  </li>
+<li>Table 2: Feature-to-Module Mapping  </li>
+<li>Table 3: Functional Requirements  </li>
+<li>Table 4: Non-Functional Requirements  </li>
+<li>Table 5: Data Dictionary  </li>
+<li>Table 6: API Endpoint Mapping  </li>
+<li>Table 7: Work Breakdown Structure  </li>
+<li>Table 8: Milestone Schedule  </li>
+<li>Table 9: Risk Register  </li>
+<li>Table 10: Test Cases and Results  </li>
+<li>Table 11: Bug and Improvement Log  </li>
+<li>Table 12: Performance Observation Metrics  </li>
+</ol>
+<hr />
+<h2>ABSTRACT</h2>
+<p>The project <strong>"S-Show: Movie and TV Discovery Web Application"</strong> is a modern single-page web platform developed to provide a centralized, responsive, and user-friendly interface for entertainment data exploration. The system is implemented using <strong>React 18</strong>, <strong>Vite</strong>, <strong>Redux Toolkit</strong>, <strong>React Router</strong>, <strong>Tailwind CSS</strong>, <strong>Axios</strong>, and <strong>React Player</strong>, and consumes real-time data from <strong>The Movie Database (TMDB) API</strong>.</p>
+<p>The core motivation behind this project is to reduce the complexity and fragmentation users face when searching for high-quality content information across different sources. Instead of navigating multiple websites, users can discover trending items, popular movies, TV shows, and people, filter by category and time duration, inspect metadata-rich detail pages, and watch official trailers in a single interface.</p>
+<p>From a software engineering perspective, the project demonstrates a modular architecture with reusable components, route-based rendering, asynchronous API integration, and structured state management. The listing pages use infinite scroll for better browsing experience and reduced initial payload. Detail pages integrate multiple TMDB endpoints to consolidate recommendations, external IDs, translations, and video resources.</p>
+<p>The report documents complete academic and technical details including problem context, literature analysis, objective mapping, methodology, architecture, data flow, implementation strategy, testing, result analysis, constraints, and future enhancements. The outcome is a scalable foundation for a production-grade content discovery platform.</p>
+<p><strong>Keywords:</strong> React, Vite, Redux Toolkit, TMDB API, Tailwind CSS, Infinite Scroll, Media Discovery</p>
+<hr />
+<h1>CHAPTER 1: INTRODUCTION</h1>
+<h2>1.1 AIM</h2>
+<p>To design and develop a robust, interactive, and scalable web application that enables users to explore movies, TV shows, and celebrity profiles using real-time data, while ensuring a clean user interface, modular architecture, and maintainable codebase.</p>
+<h2>1.2 PROJECT BACKGROUND</h2>
+<p>Digital entertainment consumption has shifted from traditional broadcast systems to on-demand, recommendation-driven discovery ecosystems. Users now demand:</p>
+<ul>
+<li>Fast search across multiple media categories</li>
+<li>Concise and trustworthy metadata</li>
+<li>High-visual layouts with quick previews</li>
+<li>Direct trailer access</li>
+<li>Multi-device compatibility</li>
+</ul>
+<p>Large commercial platforms provide this functionality but often combine discovery with subscription systems, ads, account gates, and region restrictions. For students and developers studying modern web architecture, there is a need for a focused, lightweight, and technically transparent discovery platform.</p>
+<p>The S-Show project addresses this need by providing:</p>
+<ul>
+<li>Immediate access to trending and popular media</li>
+<li>Category and duration filters</li>
+<li>Rich detail pages driven by API aggregation</li>
+<li>Modular front-end architecture suitable for learning and extension</li>
+</ul>
+<h2>1.3 OBJECTIVE</h2>
+<p>The primary and secondary objectives are:</p>
+<h3>Primary Objectives</h3>
+<ol>
+<li>Develop a fully functional single-page media discovery platform.</li>
+<li>Integrate external movie database APIs for real-time data.</li>
+<li>Ensure smooth and intuitive navigation between list and detail pages.</li>
+<li>Build reusable UI modules and maintain clear state separation.</li>
+</ol>
+<h3>Secondary Objectives</h3>
+<ol>
+<li>Implement searchable and filterable content browsing.</li>
+<li>Provide trailer playback and recommendation flows.</li>
+<li>Reduce repetitive API handling through centralized client setup.</li>
+<li>Demonstrate practical software lifecycle execution from analysis to testing.</li>
+</ol>
+<h2>1.4 BENEFITS</h2>
+<h3>Academic Benefits</h3>
+<ul>
+<li>Demonstrates applied knowledge of front-end architecture.</li>
+<li>Covers modern JavaScript ecosystem tools.</li>
+<li>Shows practical use of asynchronous programming and state management.</li>
+<li>Provides report-ready implementation evidence for major project evaluation.</li>
+</ul>
+<h3>Technical Benefits</h3>
+<ul>
+<li>Reusable component library for media UI.</li>
+<li>Centralized API configuration.</li>
+<li>Better maintainability through store slices and route-based modules.</li>
+<li>Scalable structure for future enhancement.</li>
+</ul>
+<h3>User Benefits</h3>
+<ul>
+<li>Quick and clean interface for media exploration.</li>
+<li>Unified search across content types.</li>
+<li>Detailed content metadata in one view.</li>
+<li>Continuous discovery via infinite scrolling and recommendations.</li>
+</ul>
+<h2>1.5 SCOPE OF THE PROJECT</h2>
+<h3>In Scope</h3>
+<ul>
+<li>Front-end media browsing</li>
+<li>Search, filtering, and pagination</li>
+<li>Movie/TV/person detail views</li>
+<li>Trailer playback through embedded player</li>
+<li>Recommendation and similar content navigation</li>
+</ul>
+<h3>Out of Scope (Current Version)</h3>
+<ul>
+<li>User accounts and personalization</li>
+<li>Server-side recommendation engines</li>
+<li>Watchlist persistence in backend database</li>
+<li>Payment/subscription integrations</li>
+<li>Regional availability analytics</li>
+</ul>
+<h2>1.6 PROBLEM STATEMENT</h2>
+<p>Users seeking content discovery often face fragmented, inconsistent, and overloaded interfaces. Educational projects also commonly lack real-time integration and architecture quality. The problem is to create a responsive, modular, and API-driven web system that simplifies media discovery while remaining maintainable and extensible.</p>
+<h2>1.7 PROJECT JUSTIFICATION</h2>
+<p>This project is justified due to:</p>
+<ul>
+<li>High practical relevance of entertainment data systems.</li>
+<li>Strong alignment with current front-end development trends.</li>
+<li>Opportunity to apply clean architecture principles in an API-first environment.</li>
+<li>Educational value in integrating routing, state management, async operations, and UI design in one product.</li>
+</ul>
+<hr />
+<h1>CHAPTER 2: LITERATURE SURVEY</h1>
+<h2>2.1 INTRODUCTION TO LITERATURE SURVEY</h2>
+<p>The literature survey evaluates existing systems, technical stacks, and design approaches used in modern media discovery platforms. The survey also identifies limitations in student-level implementations and maps opportunities for better architecture.</p>
+<h2>2.2 EXISTING SYSTEMS</h2>
+<h3>2.2.1 OTT Platform Interfaces</h3>
+<p>Commercial OTT interfaces provide recommendation rails, watchlist management, and personalized feeds. However:</p>
+<ul>
+<li>Data is often hidden behind account systems.</li>
+<li>Discovery can be biased by subscription inventory.</li>
+<li>Interfaces are optimized for retention, not necessarily transparent metadata exploration.</li>
+</ul>
+<h3>2.2.2 Movie Database Websites</h3>
+<p>Movie database portals provide rich data but may:</p>
+<ul>
+<li>Present information in cluttered layouts.</li>
+<li>Have inconsistent mobile-first design.</li>
+<li>Offer less fluid navigation across categories.</li>
+</ul>
+<h3>2.2.3 Community Review Platforms</h3>
+<p>Community-driven systems are useful for reviews but less efficient for structured exploration and direct metadata comparisons.</p>
+<h2>2.3 STUDY OF TECHNOLOGIES USED</h2>
+<h3>2.3.1 React</h3>
+<p>React supports component-driven development, declarative UI updates, and efficient re-rendering. It is suitable for highly interactive views such as dynamic cards, filters, and modal overlays.</p>
+<h3>2.3.2 Vite</h3>
+<p>Vite improves developer productivity with fast startup and hot module replacement. It is ideal for modern front-end projects requiring rapid iteration.</p>
+<h3>2.3.3 Redux Toolkit</h3>
+<p>Redux Toolkit simplifies store setup, reducers, and action handling. It helps maintain predictable state for detail pages where multiple API responses are aggregated.</p>
+<h3>2.3.4 React Router</h3>
+<p>React Router enables clean URL-based navigation and nested routes for detail/trailer flows.</p>
+<h3>2.3.5 Tailwind CSS</h3>
+<p>Tailwind allows utility-first styling, reducing context switching between CSS and JSX while promoting consistency.</p>
+<h3>2.3.6 Axios</h3>
+<p>Axios provides clean asynchronous HTTP request handling and supports centralized instance configuration with base URL and headers.</p>
+<h2>2.4 COMPARATIVE ANALYSIS</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Conventional Student Projects</th>
+<th>S-Show Proposed Approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Source</td>
+<td>Static JSON</td>
+<td>Live TMDB API</td>
+</tr>
+<tr>
+<td>UI Structure</td>
+<td>Page-heavy, less reusable</td>
+<td>Reusable component architecture</td>
+</tr>
+<tr>
+<td>State Control</td>
+<td>Prop drilling or local only</td>
+<td>Redux slices for detail state</td>
+</tr>
+<tr>
+<td>Navigation</td>
+<td>Limited</td>
+<td>Route-driven full navigation</td>
+</tr>
+<tr>
+<td>Loading UX</td>
+<td>Full reloads</td>
+<td>Infinite scroll and SPA behavior</td>
+</tr>
+<tr>
+<td>Trailer Support</td>
+<td>Often absent</td>
+<td>Integrated <code>react-player</code></td>
+</tr>
+</tbody>
+</table>
+<h2>2.5 GAPS IDENTIFIED</h2>
+<ol>
+<li>Lack of integrated cross-type search.</li>
+<li>Weak state architecture in many projects.</li>
+<li>Minimal testing and non-functional analysis.</li>
+<li>Poor documentation and methodological alignment with academic formats.</li>
+</ol>
+<h2>2.6 PROPOSED SYSTEM POSITIONING</h2>
+<p>The proposed system addresses these gaps through:</p>
+<ul>
+<li>API-driven dynamic content</li>
+<li>Component abstraction</li>
+<li>Structured state and data-flow layers</li>
+<li>Comprehensive academic documentation</li>
+</ul>
+<hr />
+<h1>CHAPTER 3: PROBLEM IDENTIFICATION AND OBJECTIVE</h1>
+<h2>3.1 PROBLEM IDENTIFICATION</h2>
+<p>The identified problem can be categorized in user, system, and engineering dimensions.</p>
+<h3>3.1.1 User-Centric Issues</h3>
+<ul>
+<li>Users must switch platforms for browsing different media categories.</li>
+<li>Many interfaces do not provide a balanced mix of quick discovery and metadata depth.</li>
+<li>Trailer access is frequently indirect.</li>
+</ul>
+<h3>3.1.2 System-Centric Issues</h3>
+<ul>
+<li>Existing lightweight apps may not support pagination and filtering properly.</li>
+<li>Data flows are often coupled tightly with components.</li>
+<li>API integration is sometimes scattered and repetitive.</li>
+</ul>
+<h3>3.1.3 Engineering-Centric Issues</h3>
+<ul>
+<li>Minimal modularity increases maintenance effort.</li>
+<li>Lack of store abstraction causes inconsistent state handling.</li>
+<li>Inadequate documentation affects long-term enhancement.</li>
+</ul>
+<h2>3.2 OBJECTIVE BREAKDOWN</h2>
+<h3>3.2.1 Functional Objective Breakdown</h3>
+<table>
+<thead>
+<tr>
+<th>Objective ID</th>
+<th>Objective Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OBJ-F1</td>
+<td>Show trending content by media type and time window</td>
+</tr>
+<tr>
+<td>OBJ-F2</td>
+<td>Show popular content lists with category toggle</td>
+</tr>
+<tr>
+<td>OBJ-F3</td>
+<td>Support paginated discovery through infinite scrolling</td>
+</tr>
+<tr>
+<td>OBJ-F4</td>
+<td>Implement multi-type search</td>
+</tr>
+<tr>
+<td>OBJ-F5</td>
+<td>Show detail metadata from multiple related endpoints</td>
+</tr>
+<tr>
+<td>OBJ-F6</td>
+<td>Show trailers in overlay playback mode</td>
+</tr>
+</tbody>
+</table>
+<h3>3.2.2 Quality Objective Breakdown</h3>
+<table>
+<thead>
+<tr>
+<th>Objective ID</th>
+<th>Objective Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OBJ-Q1</td>
+<td>Modular and reusable UI design</td>
+</tr>
+<tr>
+<td>OBJ-Q2</td>
+<td>Predictable state handling</td>
+</tr>
+<tr>
+<td>OBJ-Q3</td>
+<td>Responsive and readable interface</td>
+</tr>
+<tr>
+<td>OBJ-Q4</td>
+<td>Extensible architecture for future growth</td>
+</tr>
+</tbody>
+</table>
+<h2>3.3 FEASIBILITY ANALYSIS</h2>
+<h3>3.3.1 Technical Feasibility</h3>
+<p>The selected stack is stable, mature, and compatible. TMDB endpoints provide sufficient data for all planned modules.</p>
+<h3>3.3.2 Operational Feasibility</h3>
+<p>Users can access the application from modern browsers without installation complexity.</p>
+<h3>3.3.3 Economic Feasibility</h3>
+<p>Development tools and libraries are open source. No paid backend hosting is required for the current project stage.</p>
+<h3>3.3.4 Schedule Feasibility</h3>
+<p>The project can be completed within semester constraints with iterative milestone planning.</p>
+<h2>3.4 STAKEHOLDER ANALYSIS</h2>
+<ul>
+<li><strong>Student Developer:</strong> Builds and maintains the project.</li>
+<li><strong>Project Guide:</strong> Reviews architecture and academic quality.</li>
+<li><strong>Examiners:</strong> Evaluate functional and documentation quality.</li>
+<li><strong>End User:</strong> Uses discovery features and navigational flows.</li>
+</ul>
+<h2>3.5 ASSUMPTIONS AND DEPENDENCIES</h2>
+<h3>Assumptions</h3>
+<ol>
+<li>Internet connectivity is available.</li>
+<li>TMDB endpoints remain operational and stable.</li>
+<li>User devices support modern browser standards.</li>
+</ol>
+<h3>Dependencies</h3>
+<ol>
+<li>Third-party API availability.</li>
+<li>Node/npm ecosystem.</li>
+<li>Correct API authentication token setup.</li>
+</ol>
+<hr />
+<h1>CHAPTER 4: PROPOSED METHODOLOGY</h1>
+<h2>4.1 OVERALL METHODOLOGY</h2>
+<p>The project follows an iterative implementation methodology with continuous validation:</p>
+<ol>
+<li>Requirement Analysis  </li>
+<li>System Design  </li>
+<li>Module Implementation  </li>
+<li>Integration Testing  </li>
+<li>Documentation and Refinement</li>
+</ol>
+<p>This approach allows incremental feature delivery and regular correction of design or implementation gaps.</p>
+<h2>4.2 SYSTEM ARCHITECTURE</h2>
+<h3>4.2.1 High-Level Architecture</h3>
+<p>User -&gt; React UI -&gt; Route Layer -&gt; Data Layer (Axios/Redux) -&gt; TMDB API -&gt; Rendered UI</p>
+<h3>4.2.2 Layer Description</h3>
+<ol>
+<li><strong>Presentation Layer:</strong> Components and pages.</li>
+<li><strong>Navigation Layer:</strong> Router and nested routes.</li>
+<li><strong>Data Access Layer:</strong> Axios client and async actions.</li>
+<li><strong>State Layer:</strong> Redux slices for detail pages.</li>
+<li><strong>External Service Layer:</strong> TMDB API endpoints.</li>
+</ol>
+<h2>4.3 COMPONENT-LEVEL DESIGN</h2>
+<p>The project is organized into:</p>
+<ul>
+<li>Common partials (<code>Topnav</code>, <code>Sidenav</code>, <code>Dropdown</code>, <code>Cards</code>, <code>Header</code>)</li>
+<li>Feature pages (<code>Home</code>, <code>Trending</code>, <code>Popular</code>, <code>Movie</code>, <code>Tv_show</code>, <code>People</code>)</li>
+<li>Detail pages (<code>Moviedetails</code>, <code>Tvdetails</code>, <code>Peopledetails</code>)</li>
+<li>Utility modules (<code>Axios</code>, store actions/reducers)</li>
+</ul>
+<p>This modularization improves readability and future extension.</p>
+<h2>4.4 ROUTING DESIGN</h2>
+<p>Routing strategy includes:</p>
+<ul>
+<li>Root home route</li>
+<li>Separate listing routes per content type</li>
+<li>Dynamic detail routes by content ID</li>
+<li>Nested trailer routes for media details</li>
+<li>Catch-all not-found route</li>
+</ul>
+<h2>4.5 DATA ACQUISITION STRATEGY</h2>
+<h3>4.5.1 Listing Endpoints</h3>
+<ul>
+<li>Trending by media and duration</li>
+<li>Category-based movie and TV endpoints</li>
+<li>Popular people and popular media endpoints</li>
+</ul>
+<h3>4.5.2 Detail Aggregation Endpoints</h3>
+<p>For movies and TV, multiple endpoints are called:</p>
+<ul>
+<li>Detail</li>
+<li>External IDs</li>
+<li>Recommendations</li>
+<li>Videos</li>
+<li>Similar</li>
+<li>Translations</li>
+<li>Watch providers</li>
+</ul>
+<p>For people:</p>
+<ul>
+<li>Detail</li>
+<li>External IDs</li>
+<li>Credits</li>
+</ul>
+<h2>4.6 STATE MANAGEMENT METHODOLOGY</h2>
+<p>A hybrid strategy is used:</p>
+<ul>
+<li>Local component state for lists and pagination</li>
+<li>Redux slices for complex detail pages</li>
+</ul>
+<p>Benefits:</p>
+<ul>
+<li>Keeps transient list state localized</li>
+<li>Avoids overloading global store</li>
+<li>Maintains consistent access to detailed media metadata</li>
+</ul>
+<h2>4.7 UI/UX METHODOLOGY</h2>
+<p>Design decisions include:</p>
+<ul>
+<li>Dark-themed consistent visual language</li>
+<li>Card-first content display</li>
+<li>Prominent search bar and category filters</li>
+<li>Back navigation support</li>
+<li>Quick trailer action in detail views</li>
+</ul>
+<h2>4.8 PAGINATION AND SCROLL STRATEGY</h2>
+<p>Infinite scroll is implemented for better UX:</p>
+<ul>
+<li>Initial page load fetches page 1</li>
+<li>Additional pages requested on scroll threshold</li>
+<li><code>hasMore</code> flag controls pagination end condition</li>
+</ul>
+<p>Advantages:</p>
+<ul>
+<li>Reduced first paint payload</li>
+<li>Better continuity of user browsing</li>
+</ul>
+<h2>4.9 ERROR AND LOADING HANDLING</h2>
+<p>Current strategy:</p>
+<ul>
+<li><code>Loading</code> component for delayed content</li>
+<li>Console logging of fetch errors</li>
+<li>Fallback views where needed</li>
+</ul>
+<p>Future strategy:</p>
+<ul>
+<li>Dedicated error boundaries</li>
+<li>Retry actions</li>
+<li>User-visible status messages</li>
+</ul>
+<h2>4.10 PHYSICAL DESIGN</h2>
+<ul>
+<li>Browser-based client application</li>
+<li>Built with Vite static bundling</li>
+<li>No server process required in final static deployment mode</li>
+</ul>
+<h2>4.11 DATABASE DESIGN</h2>
+<p>No internal database in current version.<br />
+Data model is virtualized from TMDB responses and represented through JavaScript objects.</p>
+<h2>4.12 DATA MODELING</h2>
+<h3>Core Entities</h3>
+<ol>
+<li>Media Item  </li>
+<li>Person  </li>
+<li>Video Resource  </li>
+<li>Recommendation Set  </li>
+<li>Translation Set  </li>
+<li>Provider Data</li>
+</ol>
+<h3>Relationships</h3>
+<ul>
+<li>Media has many videos.</li>
+<li>Media has many recommendations.</li>
+<li>Person has many credits.</li>
+<li>Media maps to translations/providers.</li>
+</ul>
+<h2>4.13 DATAFLOW DIAGRAMS</h2>
+<h3>DFD Level 0</h3>
+<p>User &lt;-&gt; S-Show Front-End &lt;-&gt; TMDB API</p>
+<h3>DFD Level 1</h3>
+<ol>
+<li>User action triggers route/module.</li>
+<li>Module prepares endpoint request.</li>
+<li>Axios sends authenticated request.</li>
+<li>Response data transformed.</li>
+<li>UI renders cards/details/trailer.</li>
+</ol>
+<h2>4.14 DATA DICTIONARY</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Number</td>
+<td>Unique identifier</td>
+</tr>
+<tr>
+<td>media_type</td>
+<td>String</td>
+<td><code>movie</code>, <code>tv</code>, <code>person</code></td>
+</tr>
+<tr>
+<td>title/name</td>
+<td>String</td>
+<td>Primary display text</td>
+</tr>
+<tr>
+<td>original_title/original_name</td>
+<td>String</td>
+<td>Original source title</td>
+</tr>
+<tr>
+<td>overview</td>
+<td>String</td>
+<td>Description summary</td>
+</tr>
+<tr>
+<td>genre_ids/genres</td>
+<td>Array</td>
+<td>Genre mapping</td>
+</tr>
+<tr>
+<td>vote_average</td>
+<td>Number</td>
+<td>Aggregated rating</td>
+</tr>
+<tr>
+<td>release_date/first_air_date</td>
+<td>String</td>
+<td>Date metadata</td>
+</tr>
+<tr>
+<td>poster_path/backdrop_path</td>
+<td>String</td>
+<td>Image path</td>
+</tr>
+<tr>
+<td>profile_path</td>
+<td>String</td>
+<td>Person profile image</td>
+</tr>
+<tr>
+<td>homepage</td>
+<td>String</td>
+<td>Official site URL</td>
+</tr>
+<tr>
+<td>imdb_id/wikidata_id</td>
+<td>String</td>
+<td>External references</td>
+</tr>
+</tbody>
+</table>
+<h2>4.15 ER MODEL (CONCEPTUAL)</h2>
+<ul>
+<li><strong>Media</strong> (PK: id)  </li>
+<li><strong>Person</strong> (PK: id)  </li>
+<li><strong>Video</strong> (FK: media_id)  </li>
+<li><strong>Translation</strong> (FK: media_id)  </li>
+<li><strong>Provider</strong> (FK: media_id)  </li>
+<li><strong>Recommendation</strong> (FK: media_id, related_media_id)</li>
+</ul>
+<h2>4.16 HARDWARE AND SOFTWARE REQUIREMENTS</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Processor</td>
+<td>Intel/AMD dual-core or above</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>4 GB minimum, 8 GB recommended</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>1 GB free for project + dependencies</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td>Windows/Linux/macOS</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>18+</td>
+</tr>
+<tr>
+<td>npm</td>
+<td>Latest compatible</td>
+</tr>
+<tr>
+<td>IDE</td>
+<td>VS Code / Cursor / similar</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>Chrome/Edge/Firefox</td>
+</tr>
+<tr>
+<td>Build Tool</td>
+<td>Vite</td>
+</tr>
+<tr>
+<td>Front-End</td>
+<td>React 18</td>
+</tr>
+<tr>
+<td>State Tool</td>
+<td>Redux Toolkit</td>
+</tr>
+<tr>
+<td>Styling</td>
+<td>Tailwind CSS</td>
+</tr>
+<tr>
+<td>HTTP Client</td>
+<td>Axios</td>
+</tr>
+</tbody>
+</table>
+<h2>4.17 PROJECT SCHEDULE</h2>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Duration</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requirement and study</td>
+<td>Week 1-2</td>
+<td>Scope and endpoint finalization</td>
+</tr>
+<tr>
+<td>Design and setup</td>
+<td>Week 3-4</td>
+<td>Routing, base layout, tooling</td>
+</tr>
+<tr>
+<td>Listing modules</td>
+<td>Week 5-6</td>
+<td>Trending, popular, movie, tv, people</td>
+</tr>
+<tr>
+<td>Detail modules</td>
+<td>Week 7-8</td>
+<td>Redux integration and detail pages</td>
+</tr>
+<tr>
+<td>Search and trailer</td>
+<td>Week 9</td>
+<td>Query handling and playback</td>
+</tr>
+<tr>
+<td>Testing and fixes</td>
+<td>Week 10</td>
+<td>Stability and cleanup</td>
+</tr>
+<tr>
+<td>Report and submission</td>
+<td>Week 11-12</td>
+<td>Final documentation</td>
+</tr>
+</tbody>
+</table>
+<h2>4.18 WORK BREAKDOWN STRUCTURE</h2>
+<table>
+<thead>
+<tr>
+<th>WBS ID</th>
+<th>Work Package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>Project planning and requirement gathering</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>Technology stack finalization</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>UI structure design</td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>Routing and navigation implementation</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>API integration development</td>
+</tr>
+<tr>
+<td>6.0</td>
+<td>Redux state architecture</td>
+</tr>
+<tr>
+<td>7.0</td>
+<td>Feature-level testing and debugging</td>
+</tr>
+<tr>
+<td>8.0</td>
+<td>Documentation and final review</td>
+</tr>
+</tbody>
+</table>
+<h2>4.19 GANTT CHART (TEXTUAL)</h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>W1-2</th>
+<th>W3-4</th>
+<th>W5-6</th>
+<th>W7-8</th>
+<th>W9</th>
+<th>W10</th>
+<th>W11-12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analysis</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Design</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Development</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Testing</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<h2>4.20 API ENDPOINT MAPPING</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Endpoint Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home Trending</td>
+<td><code>/trending/{category}/day</code></td>
+</tr>
+<tr>
+<td>Trending Page</td>
+<td><code>/trending/{category}/{duration}</code></td>
+</tr>
+<tr>
+<td>Popular</td>
+<td><code>/{category}/popular</code></td>
+</tr>
+<tr>
+<td>Movies</td>
+<td><code>/movie/{category}</code></td>
+</tr>
+<tr>
+<td>TV Shows</td>
+<td><code>/tv/{category}</code></td>
+</tr>
+<tr>
+<td>People</td>
+<td><code>/person/popular</code></td>
+</tr>
+<tr>
+<td>Movie Detail</td>
+<td><code>/movie/{id}</code> + related sub-endpoints</td>
+</tr>
+<tr>
+<td>TV Detail</td>
+<td><code>/tv/{id}</code> + related sub-endpoints</td>
+</tr>
+<tr>
+<td>Person Detail</td>
+<td><code>/person/{id}</code> + credit endpoints</td>
+</tr>
+<tr>
+<td>Search</td>
+<td><code>/search/multi?query={text}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>CHAPTER 5: SIMULATION AND RESULTS</h1>
+<h2>5.1 INTRODUCTION</h2>
+<p>This chapter explains implementation behavior, module simulation, test observations, and outcomes. The term simulation in this context refers to runtime feature verification under expected user flows.</p>
+<h2>5.2 USER INTERFACE DESIGN</h2>
+<h3>5.2.1 Home Interface</h3>
+<ul>
+<li>Sidebar with key navigation options</li>
+<li>Search-enabled top navigation</li>
+<li>Dynamic hero banner from trending content</li>
+<li>Horizontal trending cards with quick detail access</li>
+</ul>
+<h3>5.2.2 Listing Interfaces</h3>
+<ul>
+<li>Trending with category and duration filters</li>
+<li>Popular with category switch (<code>movie</code>/<code>tv</code>)</li>
+<li>Movie and TV pages with category-aware infinite scrolling</li>
+<li>People page for popular personalities</li>
+</ul>
+<h3>5.2.3 Detail Interfaces</h3>
+<ul>
+<li>Backdrop-driven visual detail layout</li>
+<li>Metadata: rating, genres, date, overview, translations</li>
+<li>External links (homepage, IMDb, Wikidata, social links)</li>
+<li>Recommendation rails for extended discovery</li>
+<li>Trailer overlay playback</li>
+</ul>
+<h2>5.3 MODULES AND THEIR ABSTRACTION</h2>
+<h3>Module 1: App Routing Layer</h3>
+<p>Responsibilities:</p>
+<ul>
+<li>Route declarations</li>
+<li>Dynamic route resolution</li>
+<li>Nested trailer route integration</li>
+<li>404 fallback behavior</li>
+</ul>
+<h3>Module 2: Store and Reducer Layer</h3>
+<p>Responsibilities:</p>
+<ul>
+<li>Initialize global store</li>
+<li>Handle movie/tv/person detail slices</li>
+<li>Load and clear detail payloads</li>
+</ul>
+<h3>Module 3: Action (Async) Layer</h3>
+<p>Responsibilities:</p>
+<ul>
+<li>Trigger parallel/sequential API calls</li>
+<li>Aggregate endpoint responses into single detail object</li>
+<li>Dispatch consolidated payload to reducers</li>
+</ul>
+<h3>Module 4: UI Reusable Components</h3>
+<p>Responsibilities:</p>
+<ul>
+<li>Avoid duplicate layout code</li>
+<li>Standardize card and filter behavior</li>
+<li>Maintain design consistency</li>
+</ul>
+<h3>Module 5: Search and Discovery Layer</h3>
+<p>Responsibilities:</p>
+<ul>
+<li>Handle query input events</li>
+<li>Fetch multi-search response</li>
+<li>Route user to selected result detail</li>
+</ul>
+<h2>5.4 FEATURE-TO-MODULE TRACEABILITY</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Primary Module</th>
+<th>Supporting Modules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trending feed</td>
+<td><code>Home</code>, <code>Trending</code></td>
+<td><code>Dropdown</code>, <code>Cards</code>, <code>Axios</code></td>
+</tr>
+<tr>
+<td>Popular feed</td>
+<td><code>Popular</code></td>
+<td><code>Dropdown</code>, <code>InfiniteScroll</code></td>
+</tr>
+<tr>
+<td>Movie browse</td>
+<td><code>Movie</code></td>
+<td><code>Cards</code>, <code>Topnav</code></td>
+</tr>
+<tr>
+<td>TV browse</td>
+<td><code>Tv_show</code></td>
+<td><code>Cards</code>, <code>Topnav</code></td>
+</tr>
+<tr>
+<td>People browse</td>
+<td><code>People</code></td>
+<td><code>Cards</code>, <code>Topnav</code></td>
+</tr>
+<tr>
+<td>Detail metadata</td>
+<td><code>Moviedetails</code>, <code>Tvdetails</code>, <code>Peopledetails</code></td>
+<td>Redux actions/slices</td>
+</tr>
+<tr>
+<td>Trailer playback</td>
+<td><code>Trailer</code></td>
+<td>Nested routes, <code>react-player</code></td>
+</tr>
+<tr>
+<td>Search</td>
+<td><code>Topnav</code></td>
+<td><code>Axios</code>, route links</td>
+</tr>
+</tbody>
+</table>
+<h2>5.5 RESULT ANALYSIS</h2>
+<h3>5.5.1 Functional Results</h3>
+<ol>
+<li>All major listing pages load and render data from TMDB.</li>
+<li>Category toggles trigger reset and new data fetch correctly.</li>
+<li>Infinite scroll appends data pages and stops at data exhaustion.</li>
+<li>Detail modules fetch richer datasets than list pages.</li>
+<li>Trailer playback works when valid video key exists.</li>
+</ol>
+<h3>5.5.2 Usability Results</h3>
+<ol>
+<li>Navigation is straightforward and intuitive.</li>
+<li>Card-based visual design improves scan speed.</li>
+<li>Search makes cross-category discovery faster.</li>
+<li>Dark theme and spacing improve long-session readability.</li>
+</ol>
+<h3>5.5.3 Technical Results</h3>
+<ol>
+<li>Modular structure supports maintainability.</li>
+<li>Redux centralization simplifies detail state handling.</li>
+<li>Axios instance reduces repetitive request setup.</li>
+<li>Vite-based development gives fast feedback cycle.</li>
+</ol>
+<h2>5.6 FUNCTIONAL REQUIREMENTS</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Functional Requirement</th>
+<th>Status</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FR1</td>
+<td>Home trending feed</td>
+<td>Completed</td>
+<td>Home page render</td>
+</tr>
+<tr>
+<td>FR2</td>
+<td>Trending filter by type</td>
+<td>Completed</td>
+<td>Dropdown in Trending</td>
+</tr>
+<tr>
+<td>FR3</td>
+<td>Trending filter by duration</td>
+<td>Completed</td>
+<td>Day/Week switch</td>
+</tr>
+<tr>
+<td>FR4</td>
+<td>Popular module</td>
+<td>Completed</td>
+<td>Popular page</td>
+</tr>
+<tr>
+<td>FR5</td>
+<td>Movie categories</td>
+<td>Completed</td>
+<td>Movie page category switch</td>
+</tr>
+<tr>
+<td>FR6</td>
+<td>TV categories</td>
+<td>Completed</td>
+<td>TV page category switch</td>
+</tr>
+<tr>
+<td>FR7</td>
+<td>People popular listing</td>
+<td>Completed</td>
+<td>People page</td>
+</tr>
+<tr>
+<td>FR8</td>
+<td>Search</td>
+<td>Completed</td>
+<td>Top search bar</td>
+</tr>
+<tr>
+<td>FR9</td>
+<td>Movie detail view</td>
+<td>Completed</td>
+<td><code>/movie/details/:id</code></td>
+</tr>
+<tr>
+<td>FR10</td>
+<td>TV detail view</td>
+<td>Completed</td>
+<td><code>/tv/details/:id</code></td>
+</tr>
+<tr>
+<td>FR11</td>
+<td>Person detail view</td>
+<td>Completed</td>
+<td><code>/people/details/:id</code></td>
+</tr>
+<tr>
+<td>FR12</td>
+<td>Trailer playback</td>
+<td>Completed</td>
+<td>Nested trailer route</td>
+</tr>
+</tbody>
+</table>
+<h2>5.7 NON-FUNCTIONAL REQUIREMENTS</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Non-Functional Requirement</th>
+<th>Observation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NFR1</td>
+<td>Responsiveness</td>
+<td>Works on modern screens</td>
+</tr>
+<tr>
+<td>NFR2</td>
+<td>Maintainability</td>
+<td>Modular components and store slices</td>
+</tr>
+<tr>
+<td>NFR3</td>
+<td>Performance</td>
+<td>Good due to lazy loading via scroll</td>
+</tr>
+<tr>
+<td>NFR4</td>
+<td>Scalability</td>
+<td>Extendable with additional routes/features</td>
+</tr>
+<tr>
+<td>NFR5</td>
+<td>Availability</td>
+<td>Depends on TMDB API uptime</td>
+</tr>
+<tr>
+<td>NFR6</td>
+<td>Security</td>
+<td>Needs token hardening through env setup</td>
+</tr>
+</tbody>
+</table>
+<h2>5.8 TESTING STRATEGY</h2>
+<h3>5.8.1 Testing Scope</h3>
+<ul>
+<li>Route behavior</li>
+<li>API integration behavior</li>
+<li>Filter and pagination workflows</li>
+<li>Detail data rendering</li>
+<li>Error and fallback scenarios</li>
+</ul>
+<h3>5.8.2 Test Type</h3>
+<ol>
+<li>Manual functional testing</li>
+<li>Module-level behavior checks</li>
+<li>UI interaction testing</li>
+<li>Data consistency checks</li>
+</ol>
+<h2>5.9 TEST CASES AND RESULTS</h2>
+<table>
+<thead>
+<tr>
+<th>TC ID</th>
+<th>Scenario</th>
+<th>Expected Output</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TC01</td>
+<td>Open home</td>
+<td>Trending header and cards visible</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>TC02</td>
+<td>Change trending category</td>
+<td>Data list refreshes</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>TC03</td>
+<td>Change duration</td>
+<td>Correct duration feed appears</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>TC04</td>
+<td>Open movie page and scroll</td>
+<td>More cards loaded</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>TC05</td>
+<td>Open TV page and change category</td>
+<td>Fresh category dataset</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>TC06</td>
+<td>Open people page and scroll</td>
+<td>Pagination works</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>TC07</td>
+<td>Search query with keyword</td>
+<td>Matching results shown</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>TC08</td>
+<td>Open movie detail</td>
+<td>Metadata and links visible</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>TC09</td>
+<td>Open trailer</td>
+<td>Embedded player opens</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>TC10</td>
+<td>Invalid route</td>
+<td>Not-found screen shown</td>
+<td>Pass</td>
+</tr>
+</tbody>
+</table>
+<h2>5.10 BUG LOG AND IMPROVEMENT TRACKER</h2>
+<table>
+<thead>
+<tr>
+<th>Bug/Issue</th>
+<th>Impact</th>
+<th>Improvement Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hardcoded token in client</td>
+<td>Security risk</td>
+<td>Move to environment variables</td>
+</tr>
+<tr>
+<td>Console logs in production path</td>
+<td>Noise</td>
+<td>Remove debug logs</td>
+</tr>
+<tr>
+<td>Partial UI text inconsistencies</td>
+<td>UX quality</td>
+<td>Standardize labels and typography</td>
+</tr>
+<tr>
+<td>Missing explicit error UI</td>
+<td>User confusion on API failures</td>
+<td>Add visible error state with retry</td>
+</tr>
+<tr>
+<td>No unit tests</td>
+<td>Reliability gap</td>
+<td>Add Jest + React Testing Library</td>
+</tr>
+</tbody>
+</table>
+<h2>5.11 PERFORMANCE OBSERVATIONS</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Observation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial dev load</td>
+<td>Fast due to Vite</td>
+</tr>
+<tr>
+<td>Data list rendering</td>
+<td>Smooth with moderate list size</td>
+</tr>
+<tr>
+<td>Pagination behavior</td>
+<td>Stable and user-friendly</td>
+</tr>
+<tr>
+<td>Detail page load</td>
+<td>Slightly heavier due to multi-endpoint aggregation</td>
+</tr>
+<tr>
+<td>Search response</td>
+<td>Fast on normal query length</td>
+</tr>
+</tbody>
+</table>
+<h2>5.12 CONSTRAINTS</h2>
+<ol>
+<li>External API dependency and rate limitations.</li>
+<li>No backend caching in current architecture.</li>
+<li>Security limitation due to front-end token exposure.</li>
+<li>No personalized recommendation engine.</li>
+<li>Test automation not yet integrated.</li>
+</ol>
+<h2>5.13 ETHICAL AND LEGAL CONSIDERATIONS</h2>
+<ol>
+<li>Data usage must comply with TMDB terms and attribution requirements.</li>
+<li>No copyrighted media streaming is performed directly.</li>
+<li>User data is not collected in current version, reducing privacy risk.</li>
+</ol>
+<hr />
+<h1>CHAPTER 6: CONCLUSION AND FUTURE SCOPE</h1>
+<h2>6.1 CONCLUSION</h2>
+<p>The <strong>S-Show</strong> major project successfully fulfills its core objective of building a modern media discovery web application using a real-world API and industry-relevant front-end architecture. The completed implementation demonstrates:</p>
+<ol>
+<li>End-to-end feature development from analysis to deployment-ready build.</li>
+<li>Effective use of React, Router, Redux Toolkit, and Axios in a coherent architecture.</li>
+<li>Practical handling of category filters, search, detail aggregation, and trailer playback.</li>
+<li>Strong modularity for future expansion and maintainability.</li>
+</ol>
+<p>From an academic perspective, the project proves the ability to translate problem statements into engineering decisions, deliver functional modules, and document implementation in structured report form.</p>
+<h2>6.2 FUTURE SCOPE</h2>
+<h3>6.2.1 Functional Enhancements</h3>
+<ol>
+<li>User authentication and profile-based preferences.</li>
+<li>Watchlist and favorites with persistent storage.</li>
+<li>Review and rating submission flow.</li>
+<li>Genre-based smart filtering and sorting.</li>
+<li>Language and region preference controls.</li>
+</ol>
+<h3>6.2.2 Technical Enhancements</h3>
+<ol>
+<li>Environment variable based secret handling.</li>
+<li>API response caching strategy.</li>
+<li>Code splitting and route-level lazy loading.</li>
+<li>Improved accessibility (ARIA labels, keyboard nav support).</li>
+<li>Automated testing pipeline with CI integration.</li>
+</ol>
+<h3>6.2.3 Product Enhancements</h3>
+<ol>
+<li>Recommendation scoring model.</li>
+<li>Similarity graph visualization for content discovery.</li>
+<li>Trending analytics dashboard.</li>
+<li>Admin moderation tools for curated lists.</li>
+</ol>
+<h3>6.2.4 Deployment Enhancements</h3>
+<ol>
+<li>CDN-optimized static deployment.</li>
+<li>Monitoring and logging integration.</li>
+<li>Failure analytics and user behavior insights.</li>
+</ol>
+<h2>6.3 FINAL REMARK</h2>
+<p>The current project serves as a strong base platform for both academic evaluation and real product evolution. With backend integration and security hardening, the solution can be scaled into a production-ready entertainment discovery system.</p>
+<hr />
+<h1>REFERENCES</h1>
+<ol>
+<li><a href="https://developer.themoviedb.org/docs">TMDB API Documentation</a></li>
+<li><a href="https://react.dev/">React Documentation</a></li>
+<li><a href="https://redux-toolkit.js.org/">Redux Toolkit Documentation</a></li>
+<li><a href="https://reactrouter.com/">React Router Documentation</a></li>
+<li><a href="https://vitejs.dev/">Vite Documentation</a></li>
+<li><a href="https://tailwindcss.com/docs">Tailwind CSS Documentation</a></li>
+<li><a href="https://axios-http.com/docs/intro">Axios Documentation</a></li>
+<li><a href="https://www.npmjs.com/package/react-infinite-scroll-component">React Infinite Scroll Component</a></li>
+<li><a href="https://www.npmjs.com/package/react-player">React Player</a></li>
+<li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+</ol>
+<hr />
+<h1>APPENDICES</h1>
+<h2>Appendix A: Project Directory Overview</h2>
+<ul>
+<li><code>src/main.jsx</code> - App bootstrap</li>
+<li><code>src/App.jsx</code> - Route configuration</li>
+<li><code>src/utils/Axios.jsx</code> - Axios client configuration</li>
+<li><code>src/components/*</code> - Feature modules</li>
+<li><code>src/components/partials/*</code> - Reusable UI components</li>
+<li><code>src/components/store/Store.jsx</code> - Redux store setup</li>
+<li><code>src/components/store/actions/*</code> - Async actions</li>
+<li><code>src/components/store/reducers/*</code> - State slices</li>
+</ul>
+<h2>Appendix B: Key Runtime Workflow (Narrative)</h2>
+<ol>
+<li>User opens home page.</li>
+<li>App loads trending wallpaper and trending list.</li>
+<li>User navigates to listing pages for deeper browsing.</li>
+<li>Infinite scroll requests subsequent pages progressively.</li>
+<li>User opens detail page; app fetches multi-endpoint metadata.</li>
+<li>User opens trailer route for media playback.</li>
+<li>User returns and continues recommendation-driven navigation.</li>
+</ol>
+<h2>Appendix C: Security and Configuration Recommendations</h2>
+<ol>
+<li>Move bearer token into <code>.env</code> and use <code>import.meta.env</code>.</li>
+<li>Add strict linting rules for accidental secret commits.</li>
+<li>Apply input sanitization and query constraints.</li>
+<li>Use CSP headers when deployed behind server/proxy.</li>
+</ol>
+<h2>Appendix D: Detailed Module Description</h2>
+<h3>Home Module</h3>
+<ul>
+<li>Combines sidebar, topnav, header, and horizontal cards.</li>
+<li>Supports quick trend discovery.</li>
+</ul>
+<h3>Trending Module</h3>
+<ul>
+<li>Supports category and duration filters.</li>
+<li>Uses infinite scroll for browsing.</li>
+</ul>
+<h3>Popular Module</h3>
+<ul>
+<li>Provides high-volume popular media feed.</li>
+</ul>
+<h3>Movie/TV Modules</h3>
+<ul>
+<li>Category-specific listing with paging.</li>
+</ul>
+<h3>People Module</h3>
+<ul>
+<li>Popular personalities and profile link flow.</li>
+</ul>
+<h3>Detail Modules</h3>
+<ul>
+<li>Rich metadata and recommendation support.</li>
+</ul>
+<h3>Trailer Module</h3>
+<ul>
+<li>Embedded playback with close/back action.</li>
+</ul>
+<h2>Appendix E: Potential Viva Questions and Answers</h2>
+<ol>
+<li>
+<p><strong>Why Redux for details but local state for list pages?</strong><br />
+   Detail pages combine multiple responses and are reused across nested routes; Redux improves consistency.</p>
+</li>
+<li>
+<p><strong>Why Vite instead of older build tools?</strong><br />
+   Faster startup and better DX for iterative development.</p>
+</li>
+<li>
+<p><strong>How is pagination controlled?</strong><br />
+   By page state, <code>hasMore</code> condition, and infinite scroll trigger.</p>
+</li>
+<li>
+<p><strong>What is the main architectural strength?</strong><br />
+   Clear separation among UI, routing, API, and state modules.</p>
+</li>
+<li>
+<p><strong>What is the major current limitation?</strong><br />
+   Security of API token in frontend configuration and lack of backend persistence.</p>
+</li>
+</ol>
+<h2>Appendix F: Sample Screens to Include in Final Printed Report</h2>
+<ol>
+<li>Home screen</li>
+<li>Trending filter screen</li>
+<li>Popular screen</li>
+<li>Movie listing with infinite scroll</li>
+<li>TV listing screen</li>
+<li>People screen</li>
+<li>Movie detail page</li>
+<li>TV detail page</li>
+<li>Person detail page</li>
+<li>Trailer overlay screen</li>
+</ol>
+<p>(Insert screenshots with captions before final print/PDF submission.)</p>
+<h2>Appendix G: Glossary</h2>
+<ul>
+<li><strong>SPA:</strong> Single Page Application.</li>
+<li><strong>TMDB:</strong> The Movie Database API service.</li>
+<li><strong>Redux Slice:</strong> Modular state and reducers in Redux Toolkit.</li>
+<li><strong>Infinite Scroll:</strong> Progressive loading on scroll interaction.</li>
+<li><strong>Endpoint:</strong> URL path used to fetch specific API resource.</li>
+<li><strong>Metadata:</strong> Descriptive information about media entities.</li>
+</ul>
+<h2>Appendix H: Detailed Screen-Wise Technical Description</h2>
+<h3>H.1 Home Screen Behavior</h3>
+<p>The home screen acts as the landing dashboard and combines a curated hero section with trending content preview cards. On first render, two independent flows are executed:</p>
+<ol>
+<li>Header spotlight fetch (<code>/trending/all/day</code>) to select randomized banner media.</li>
+<li>Trending feed fetch (<code>/trending/{category}/day</code>) to populate horizontal card rail.</li>
+</ol>
+<p>The screen demonstrates the following engineering principles:</p>
+<ul>
+<li>Multi-fetch initialization</li>
+<li>Conditional rendering (<code>Loading</code> while data is absent)</li>
+<li>Filter-driven re-fetch behavior through <code>Dropdown</code></li>
+<li>Reusable partial composition (<code>Sidenav</code>, <code>Topnav</code>, <code>Header</code>, <code>HorizortalCards</code>)</li>
+</ul>
+<h3>H.2 Trending Screen Behavior</h3>
+<p>The trending screen provides category (<code>movie</code>, <code>tv</code>, <code>all</code>) and duration (<code>day</code>, <code>week</code>) controls. This screen also integrates infinite scrolling and therefore represents one of the most interaction-heavy pages in the project.</p>
+<p>Key runtime cycle:</p>
+<ol>
+<li>Category or duration update triggers list reset.</li>
+<li>Page counter resets to <code>1</code>.</li>
+<li>First page data is fetched.</li>
+<li>Scroll threshold triggers <code>next</code> callback.</li>
+<li>New page appends to existing collection.</li>
+<li><code>hasMore</code> toggles false when exhausted.</li>
+</ol>
+<p>This behavior ensures stable pagination without full reloads.</p>
+<h3>H.3 Popular Screen Behavior</h3>
+<p>The popular module showcases dynamic endpoint switching based on selected category. Instead of maintaining separate pages for popular movies and TV shows, the module interpolates endpoint paths using selected category state.</p>
+<p>Benefits:</p>
+<ul>
+<li>Less route duplication</li>
+<li>Reduced UI and API logic redundancy</li>
+<li>Better maintainability</li>
+</ul>
+<h3>H.4 Movie Screen Behavior</h3>
+<p>The movie screen exposes popular categories (<code>popular</code>, <code>top_rated</code>, <code>upcoming</code>, <code>now_playing</code>) and supports continuous browsing. The module uses local state because list state is temporary and does not require global store persistence.</p>
+<h3>H.5 TV Screen Behavior</h3>
+<p>The TV module mirrors movie behavior with TV-specific categories (<code>airing_today</code>, <code>on_the_air</code>, <code>popular</code>, <code>top_rated</code>). This symmetry is useful for code standardization and future abstraction of list behavior into custom hooks.</p>
+<h3>H.6 People Screen Behavior</h3>
+<p>The people screen fetches popular persons and supports infinite scrolling. This module complements media discovery by letting users navigate from person profiles to related filmography context.</p>
+<h3>H.7 Movie Detail Screen Behavior</h3>
+<p>The movie detail screen performs data aggregation from multiple endpoints and dispatches one combined payload into Redux state. This allows a consolidated render model including:</p>
+<ul>
+<li>Core movie details</li>
+<li>External references</li>
+<li>Trailer metadata</li>
+<li>Recommendation and similar items</li>
+<li>Translation values</li>
+<li>Watch provider data</li>
+</ul>
+<p>The cleanup process (<code>removemovie</code>) runs on unmount to avoid stale cross-item state.</p>
+<h3>H.8 TV Detail Screen Behavior</h3>
+<p>The TV detail screen closely follows movie detail architecture and includes nested trailer route behavior. It demonstrates reuse of structure and style while adapting endpoint paths and date fields (<code>first_air_date</code> vs <code>release_date</code>).</p>
+<h3>H.9 People Detail Screen Behavior</h3>
+<p>The person detail screen provides:</p>
+<ul>
+<li>Personal profile metadata</li>
+<li>Social platform links via external IDs</li>
+<li>Biography and identity descriptors</li>
+</ul>
+<p>The action combines person details and credits into a single store payload for clean component consumption.</p>
+<h3>H.10 Trailer Overlay Behavior</h3>
+<p>Trailer rendering is route-driven using nested detail route patterns. The component inspects current path to identify content type (<code>movie</code> or <code>tv</code>) and pulls trailer video from corresponding Redux slice.</p>
+<p>User experience benefits:</p>
+<ul>
+<li>No full navigation away from detail context</li>
+<li>Fast close/back interaction</li>
+<li>Consistent watch flow</li>
+</ul>
+<h2>Appendix I: Algorithmic Logic and Pseudocode</h2>
+<h3>I.1 Infinite Scroll Data Loader</h3>
+<pre><code class="language-text">Initialize list = []
+Initialize page = 1
+Initialize hasMore = true
+
+Function resetList():
+    list = []
+    page = 1
+    hasMore = true
+    fetchList(page, isReset=true)
+
+Function fetchList(pageToFetch, isReset):
+    response = call endpoint with page = pageToFetch
+    if response.results has elements:
+        if isReset:
+            list = response.results
+        else:
+            list = list + response.results
+        page = pageToFetch + 1
+    else:
+        hasMore = false
+</code></pre>
+<h3>I.2 Detail Aggregation Logic</h3>
+<pre><code class="language-text">Function loadMovieDetails(id):
+    detail = GET /movie/{id}
+    external = GET /movie/{id}/external_ids
+    rec = GET /movie/{id}/recommendations
+    videos = GET /movie/{id}/videos
+    similar = GET /movie/{id}/similar
+    trans = GET /movie/{id}/translations
+    providers = GET /movie/{id}/watch/providers
+
+    payload = {
+        detail: detail.data,
+        externalid: external.data,
+        recommendations: rec.data.results,
+        videos: first Trailer from videos.results,
+        similar: similar.data.results,
+        watchproviders: providers.data.results,
+        translations: map(translations -&gt; name)
+    }
+
+    dispatch(loadmovie(payload))
+</code></pre>
+<h3>I.3 Search Query Flow</h3>
+<pre><code class="language-text">On query change:
+    if query length &gt;= 1:
+        call /search/multi?query=query
+        render result list
+    else:
+        clear list
+</code></pre>
+<h2>Appendix J: Quality Assurance and Validation Plan</h2>
+<h3>J.1 QA Objectives</h3>
+<ol>
+<li>Ensure all routes are navigable and render expected modules.</li>
+<li>Ensure API failures do not crash the application.</li>
+<li>Ensure filters and pagination maintain data correctness.</li>
+<li>Ensure detail pages show coherent metadata bundles.</li>
+<li>Ensure trailer playback route behaves correctly.</li>
+</ol>
+<h3>J.2 Validation Dimensions</h3>
+<h4>Functional Validation</h4>
+<ul>
+<li>Endpoint data integrity in rendered UI</li>
+<li>Filter-driven updates</li>
+<li>Search navigation accuracy</li>
+</ul>
+<h4>Usability Validation</h4>
+<ul>
+<li>Readability of UI components</li>
+<li>Consistency of interactions</li>
+<li>Discoverability of key actions</li>
+</ul>
+<h4>Reliability Validation</h4>
+<ul>
+<li>Stable behavior during quick category switching</li>
+<li>Unmount cleanup checks</li>
+<li>Invalid-route handling</li>
+</ul>
+<h4>Maintainability Validation</h4>
+<ul>
+<li>Module-level code separation</li>
+<li>Reusable component patterns</li>
+<li>Action/reducer naming consistency</li>
+</ul>
+<h3>J.3 Proposed Automated Test Suite (Future)</h3>
+<h4>Unit Tests</h4>
+<ul>
+<li>Reducer state transitions (<code>load*</code>, <code>remove*</code>)</li>
+<li>Utility helpers for data shaping</li>
+</ul>
+<h4>Component Tests</h4>
+<ul>
+<li>Dropdown interaction</li>
+<li>Card render with fallback image logic</li>
+<li>Trailer rendering when key exists / absent</li>
+</ul>
+<h4>Integration Tests</h4>
+<ul>
+<li>Route-to-detail navigation flow</li>
+<li>Search-to-detail navigation flow</li>
+<li>Infinite scroll append behavior</li>
+</ul>
+<h4>E2E Tests</h4>
+<ul>
+<li>Home to detail to trailer full journey</li>
+<li>Popular category switch under repeated interaction</li>
+</ul>
+<h3>J.4 Acceptance Criteria</h3>
+<p>The system is considered acceptance-ready when:</p>
+<ol>
+<li>All core feature tests pass.</li>
+<li>No route produces a runtime-breaking error.</li>
+<li>Major API-dependent screens handle loading and empty data safely.</li>
+<li>Reported critical bugs are resolved.</li>
+</ol>
+<h2>Appendix K: Deployment, Operations, and Maintenance Strategy</h2>
+<h3>K.1 Build and Packaging</h3>
+<p>Current build process:</p>
+<ol>
+<li>Install dependencies (<code>npm install</code>)</li>
+<li>Production bundle (<code>npm run build</code>)</li>
+<li>Preview bundle (<code>npm run preview</code>)</li>
+</ol>
+<p>Build output is static and suitable for CDN-hosted front-end deployment.</p>
+<h3>K.2 Recommended Hosting Options</h3>
+<ol>
+<li>Static hosting platforms (Netlify/Vercel/GitHub Pages equivalent)</li>
+<li>Nginx-served static folder from VPS</li>
+<li>Cloud object storage + CDN</li>
+</ol>
+<h3>K.3 Environment Strategy</h3>
+<p>To improve security and portability:</p>
+<ul>
+<li>Move API token from source file into environment variable.</li>
+<li>Use environment-based config files for <code>dev</code>, <code>staging</code>, and <code>prod</code>.</li>
+<li>Add deployment-time validation for missing env keys.</li>
+</ul>
+<h3>K.4 Monitoring Strategy</h3>
+<p>Suggested production monitoring:</p>
+<ol>
+<li>Client error tracking (runtime exceptions)</li>
+<li>API call failure rate monitoring</li>
+<li>Performance timing logs for slow screens</li>
+<li>Availability checks for static assets</li>
+</ol>
+<h3>K.5 Maintenance Strategy</h3>
+<p>Routine maintenance activities:</p>
+<ol>
+<li>Dependency update audit (monthly)</li>
+<li>Security review for exposed keys/config</li>
+<li>UI consistency checks after feature additions</li>
+<li>API contract verification against TMDB updates</li>
+</ol>
+<h2>Appendix L: Extended Risk Register and Mitigation</h2>
+<table>
+<thead>
+<tr>
+<th>Risk ID</th>
+<th>Risk Description</th>
+<th>Probability</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td>API rate limiting</td>
+<td>Medium</td>
+<td>High</td>
+<td>Add request throttling/cache</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>API schema changes</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Introduce response guards</td>
+</tr>
+<tr>
+<td>R3</td>
+<td>Hardcoded secret leakage</td>
+<td>High</td>
+<td>High</td>
+<td>Use <code>.env</code> + secret scan</td>
+</tr>
+<tr>
+<td>R4</td>
+<td>Browser compatibility regression</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Add smoke checks on major browsers</td>
+</tr>
+<tr>
+<td>R5</td>
+<td>Large payload UI lag</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Lazy loading, memoization</td>
+</tr>
+<tr>
+<td>R6</td>
+<td>Inconsistent UI copy</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Introduce UI text constants</td>
+</tr>
+<tr>
+<td>R7</td>
+<td>Missing automated tests</td>
+<td>High</td>
+<td>Medium</td>
+<td>Add staged testing roadmap</td>
+</tr>
+<tr>
+<td>R8</td>
+<td>Third-party package vulnerability</td>
+<td>Medium</td>
+<td>High</td>
+<td>Run periodic <code>npm audit</code></td>
+</tr>
+<tr>
+<td>R9</td>
+<td>Unhandled API failures</td>
+<td>Medium</td>
+<td>High</td>
+<td>Add centralized error boundaries</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>Team handover difficulty</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Maintain architecture documentation</td>
+</tr>
+</tbody>
+</table>
+<h2>Appendix M: Extended Test Scenarios</h2>
+<h3>M.1 API Negative Tests</h3>
+<ol>
+<li>Disable internet and verify graceful fallback.</li>
+<li>Use invalid token and verify controlled error behavior.</li>
+<li>Force empty result query and verify no-crash empty list state.</li>
+</ol>
+<h3>M.2 Navigation Stress Tests</h3>
+<ol>
+<li>Repeatedly switch categories before prior fetch completes.</li>
+<li>Open and close trailer overlay rapidly.</li>
+<li>Navigate back/forward with browser controls across dynamic routes.</li>
+</ol>
+<h3>M.3 Data Consistency Tests</h3>
+<ol>
+<li>Confirm rendered titles match API item IDs clicked.</li>
+<li>Confirm detail page references same item selected in list.</li>
+<li>Confirm trailer key corresponds to selected media item.</li>
+</ol>
+<h3>M.4 Accessibility Baseline Checks</h3>
+<ol>
+<li>Ensure actionable icons have descriptive alternatives in future iterations.</li>
+<li>Validate sufficient contrast for text over backgrounds.</li>
+<li>Ensure keyboard navigation feasibility for critical actions.</li>
+</ol>
+<h2>Appendix N: Viva Preparation (Extended)</h2>
+<h3>N.1 Architecture Questions</h3>
+<p><strong>Q1. Why choose a client-side only architecture for this project phase?</strong><br />
+Because project scope prioritizes front-end discovery workflows, API integration, and academic demonstration of modern SPA architecture without backend persistence overhead.</p>
+<p><strong>Q2. Why not keep all data in Redux?</strong><br />
+List pages contain transient pagination state that is locally relevant. Globalizing it would increase store complexity and boilerplate without clear benefit.</p>
+<p><strong>Q3. Why use nested routes for trailer?</strong><br />
+Nested routes preserve context of detail pages, enabling overlay-like behavior and intuitive back navigation.</p>
+<h3>N.2 Data and API Questions</h3>
+<p><strong>Q4. How do you avoid repeated request configuration?</strong><br />
+By using a centralized Axios instance with base URL and authorization headers.</p>
+<p><strong>Q5. How is multi-endpoint detail data handled?</strong><br />
+Each action gathers related endpoint responses and dispatches a unified payload, simplifying UI rendering.</p>
+<h3>N.3 Quality and Security Questions</h3>
+<p><strong>Q6. Biggest security concern in current implementation?</strong><br />
+Hardcoded API bearer token in client source.</p>
+<p><strong>Q7. Immediate fix?</strong><br />
+Use environment variables and keep sensitive values out of repository.</p>
+<p><strong>Q8. How to improve reliability?</strong><br />
+Add explicit error boundaries, retries, and automated test layers.</p>
+<h3>N.4 Future Roadmap Questions</h3>
+<p><strong>Q9. What would be first production enhancement?</strong><br />
+Authentication + persistent watchlist with backend service.</p>
+<p><strong>Q10. What optimization would you prioritize next?</strong><br />
+Route-level code splitting and API response caching.</p>
+<hr />
+<h1>PLAGIARISM REPORT</h1>
+<p>Attach plagiarism report generated from approved software here.</p>
+</body>
+</html>
