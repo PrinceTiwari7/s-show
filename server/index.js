@@ -13,7 +13,7 @@ dotenv.config({ path: path.join(__dirname, ".env") });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const TMDB_BASE_URL = "https://api.themoviedb.org/3";
+const TMDB_BASE_URL = "https://api.tmdb.org/3";
 const IS_PROD = process.env.NODE_ENV === "production";
 
 // Trim token

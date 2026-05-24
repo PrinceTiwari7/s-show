@@ -32,22 +32,32 @@ const Home = () => {
         }
     };
 
+    // Client-side timeout helper: rejects if fn takes longer than ms
+    const withTimeout = (fn, ms = 10000) =>
+        Promise.race([
+            fn(),
+            new Promise((_, reject) =>
+                setTimeout(() => reject(new Error("Request timed out. Cannot reach the movie database.")), ms)
+            ),
+        ]);
+
     const loadData = async (currentWallpaper) => {
         setIsLoading(true);
         setError(null);
         try {
             // Wallpaper: only fetch once (or on explicit retry)
             if (!currentWallpaper) {
-                const { data } = await withRetry(() => axios.get('/trending/all/day'));
+                const { data } = await withTimeout(() => axios.get('/trending/all/day'));
                 const randomdata = data.results[Math.floor(Math.random() * data.results.length)];
                 setwallpaper(randomdata);
             }
             // Trending: fetch on every category change
-            const { data } = await withRetry(() => axios.get(`/trending/${category}/day`));
+            const { data } = await withTimeout(() => axios.get(`/trending/${category}/day`));
             settrending(data.results);
         } catch (err) {
             console.log("Error loading home:", err);
-            setError("Failed to load content. Please check your connection and try again.");
+            const message = err?.response?.data?.error || err?.message || "Failed to load content.";
+            setError(`⚠️ ${message} — Please check your internet connection or try again.`);
         } finally {
             setIsLoading(false);
         }
